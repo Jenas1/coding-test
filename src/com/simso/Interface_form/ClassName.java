@@ -1,4 +1,4 @@
-package com.company.Interface_form;
+package com.simso.Interface_form;
 
 public class ClassName<E> {
     private E element;

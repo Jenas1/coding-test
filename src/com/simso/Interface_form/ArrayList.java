@@ -1,4 +1,4 @@
-package com.company.Interface_form;
+package com.simso.Interface_form;
 
 import Interface_form.List;	// List 인터페이스가 있는 패키지다.
 import java.util.Arrays;
