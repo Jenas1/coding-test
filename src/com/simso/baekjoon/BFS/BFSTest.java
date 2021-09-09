@@ -1,0 +1,43 @@
+package com.simso.baekjoon.BFS;
+
+import com.simso.ex.Pair;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class BFSTest {
+    public static void main(String[] args) {
+        int[][] graph = {{}, {2, 3, 8}, {1, 6, 8}, {1, 5}, {5, 7}, {3, 4, 7}, {2}, {4, 5}, {1, 2}};
+
+        boolean[] visited = new boolean[9];
+
+        System.out.println(bfs(1, graph, visited));
+    }
+
+    public static String bfs(int start, int[][] graph, boolean[] visited) {
+
+        StringBuffer sb = new StringBuffer();
+        Queue<Integer> q = new LinkedList<Integer>();
+
+        q.offer(start);
+
+        visited[start] = true;
+
+        while (!q.isEmpty()){
+            int nodeIndex = q.poll();
+            sb.append(nodeIndex + "->");
+
+            for (int i=0; i< graph[nodeIndex].length; i++){
+                int temp = graph[nodeIndex][i];
+
+                if(! visited[temp]){
+                    visited[temp] = true;
+                    q.offer(temp);
+                }
+            }
+        }
+
+        return sb.toString();
+    }
+}
