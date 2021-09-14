@@ -2,7 +2,7 @@ package com.simso.baekjoon.Backtracking;
 
 import java.util.Scanner;
 
-public class Main_15649 {
+public class Main_15650 {
 
     static int n;
     static int m;
