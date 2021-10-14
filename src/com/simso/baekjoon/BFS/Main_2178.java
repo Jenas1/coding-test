@@ -1,26 +1,23 @@
 package com.simso.baekjoon.BFS;
 
-import com.simso.ex.Pair;
-
 import java.awt.*;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BFSTest3 {
+public class Main_2178 {
 
-
-    static int [][]board;
-    static boolean[][] vis;
+    static int board[][];
+    static int dist[][];
+    static boolean vis[][];
     static int n;
     static int m;
-    static int[] dx = {1, 0, -1, 0};
-    static int[] dy = {0, 1, 0, -1}; // 상하좌우 네 방향을 의미
+    static int[] dx = {1,0,-1,0};
+    static int[] dy = {0,1,0,-1};
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String arg[]) throws Exception{
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(bf.readLine());
         n = Integer.parseInt(st.nextToken());
@@ -31,26 +28,27 @@ public class BFSTest3 {
 
         for (int i = 0; i < n; i++) {
             st = new StringTokenizer(bf.readLine());
-            for (int j = 0; j < m; j++) {
-                board[i][j] = Integer.parseInt(st.nextToken());
-            }
-        }  //입력
+            String line = st.nextToken();
 
-        int mx = 0;  // 그림의 최댓값
-        int num = 0; // 그림의 수
+            for (int j = 0; j < m; j++) {
+                board[i][j] = line.charAt(j) - '0';
+            }
+        }
+        System.out.println(board[n-1][m-1] +1);
+
 
         for (int i = 0; i < n; i++) {
 
             for (int j = 0; j < m; j++) { //(i, j)를 시작점으로 하고 싶은 상황
                 if(board[i][j] == 0 || vis[i][j]) continue;
-                System.out.println("==============================="+i);
-                System.out.println("+++++++++++++++++++++++++++++++"+j);
-                num++;
-                System.out.println("num 수"+num);
+
+
 
                 Queue<Point> Q = new LinkedList<>();
                 vis[i][j] = true;
                 Q.offer(new Point(i,j));
+
+
 
                 int area = 0;  // 그림의 넓이
 
@@ -69,16 +67,13 @@ public class BFSTest3 {
 
                         vis[nx][ny] = true; // (nx, ny)를 방문했다고 명시
 
+
+
                         Q.offer(new Point(nx, ny));
                     }
 
                 }
-                mx = Math.max(mx, area);
             }
-
         }
-        System.out.println(num);
-        System.out.println(mx);
-
     }
 }
