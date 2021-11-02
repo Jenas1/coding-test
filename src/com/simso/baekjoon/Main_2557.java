@@ -8,21 +8,14 @@ import java.util.Map;
 
 public class Main_2557 {
     public static void main(String[] args) throws Exception{
-/*        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         bw.write("강한친구 대한육군\n");
         bw.write("강한친구 대한육군");
         bw.flush();
-        bw.close();*/
+        bw.close();
 
 
-        HashMap<String, String>   map = new HashMap<String, String>();
-
-        map.put("last" ,"test");
-        map.put("last" ,"ee");
-
-
-        System.out.println(map.get("last"));
 
     }
 }
