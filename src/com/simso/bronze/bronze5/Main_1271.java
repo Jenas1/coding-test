@@ -1,11 +1,9 @@
-package com.simso.bronze;
+package com.simso.bronze.bronze5;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
-import java.util.Scanner;
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
 
 public class Main_1271 {
 

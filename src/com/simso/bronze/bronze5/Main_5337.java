@@ -1,4 +1,4 @@
-package com.simso.bronze;
+package com.simso.bronze.bronze5;
 
 public class Main_5337 {
 
