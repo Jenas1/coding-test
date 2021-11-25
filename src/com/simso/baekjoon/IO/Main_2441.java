@@ -10,27 +10,19 @@ public class Main_2441 {
 
         int N = Integer.parseInt(br.readLine());
 
-        Function(N);
+        for (int i = 0; i < N; i++) {
+
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < N - i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
 
     }
 
-    public static void Function(int n ){
 
-        String star= "*";
-
-        if(n == 0){
-            return;
-        }
-        for (int i = 0; i < n; i++) {
-
-            System.out.print(star);
-
-        }
-
-        System.out.println();
-
-
-        Function(n - 1);
-    }
 }
 
