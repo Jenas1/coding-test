@@ -39,6 +39,5 @@ public class Main_2522 {
 
         bw.flush();
         bw.close();
-
     }
 }

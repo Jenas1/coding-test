@@ -6,27 +6,26 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Main_10872 {
+
+    public static Long sum = 0L;
     public static void main(String [] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Scanner sc = new Scanner(System.in);
         Long N  = Long.parseLong(br.readLine());
-        Long B  = Long.parseLong(br.readLine());
 
-        Long result = test(N,B);
+        Long result = Function(N);
 
         System.out.println(result);
     }
 
+    public static Long Function(Long N){
 
+        if(N == 0){
 
-    public static Long test(Long a, Long b){
-        Long testt = 0L;
-
-        for (int i = 0; i <= b; i++) {
-            testt +=  (a * a);
+            return sum;
         }
+        sum += N;
 
 
-        return testt;
+        return Function(N - 1);
     }
 }
