@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Main_10872 {
 
-    public static Long sum = 0L;
+    public static Long sum = 1L;
     public static void main(String [] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Long N  = Long.parseLong(br.readLine());
@@ -23,8 +23,7 @@ public class Main_10872 {
 
             return sum;
         }
-        sum += N;
-
+        sum *= N;
 
         return Function(N - 1);
     }
