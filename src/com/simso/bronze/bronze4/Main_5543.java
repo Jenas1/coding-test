@@ -1,4 +1,4 @@
-package com.simso.bronze.bromze4;
+package com.simso.bronze.bronze4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
