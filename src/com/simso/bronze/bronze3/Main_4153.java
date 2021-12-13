@@ -10,27 +10,35 @@ import java.util.StringTokenizer;
 public class Main_4153 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
-        ArrayList<String> list = new ArrayList<>();
-        Boolean is = true;
 
 
-        while (is) {
-            st = new StringTokenizer(br.readLine());
+        while (true) {
+            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
+            int[] arr = new int[3];
 
-            if(a == 0 && b ==0 ){
-                is = false;
-            } else if(a > b){
-                list.add("Yes");
-            }else{
-                list.add("No");
+            arr[0] = Integer.parseInt(st.nextToken());
+            arr[1] = Integer.parseInt(st.nextToken());
+            arr[2] = Integer.parseInt(st.nextToken());
+
+            if(arr[0] ==0 && arr[1] == 0 && arr[2] == 0){
+                break;
             }
+
+            Arrays.sort(arr);
+
+            double x = Math.pow(arr[0], 2);
+            double y = Math.pow(arr[1], 2);
+            double z = Math.pow(arr[2], 2);
+
+            if ((x + y) == z) {
+                System.out.println("right");
+            } else {
+                System.out.println("wrong");
+            }
+
         }
 
-        list.forEach(s-> System.out.println(s));
 
     }
 }
