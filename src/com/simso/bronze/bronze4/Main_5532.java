@@ -8,28 +8,33 @@ import java.util.StringTokenizer;
 public class Main_5532 {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        StringTokenizer st1 = new StringTokenizer(br.readLine(), " ");
 
-        int s = 0;
-        int t = 0;
+        int L = Integer.parseInt(br.readLine());
+        int A = Integer.parseInt(br.readLine());
+        int B = Integer.parseInt(br.readLine());
+        int C = Integer.parseInt(br.readLine());
+        int D = Integer.parseInt(br.readLine());
 
+        int result1 = 0;
+        int result2 = 0;
 
-        for (int i = 0; i < 4; i++) {
-           s += Integer.parseInt(st.nextToken());
+        if( A % C == 0){
+
+            result1 = A / C;
+        }else {
+            result1 = A/C +1;
+
+        }
+        if( B % D == 0){
+
+            result2 = B / D;
+        }else {
+            result2 = B/D +1;
         }
 
-        for (int i = 0; i < 4; i++) {
-           t += Integer.parseInt(st1.nextToken());
-        }
-        if(s >= t){
-            System.out.println(s);
-        }
-        else if(t > s){
-            System.out.println(t);
-        }
+        int max = result1 > result2 ? result1: result2;
 
-
+        System.out.println(L - max);
 
 
     }
