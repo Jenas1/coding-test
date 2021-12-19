@@ -1,21 +1,43 @@
 package com.simso.bronze.bronze4;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Main_11948 {
 
     public static void main(String[] args) throws Exception {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String r = sc.next();
+        int A = Integer.parseInt(br.readLine());
+        int B = Integer.parseInt(br.readLine());
+        int C = Integer.parseInt(br.readLine());
+        int D = Integer.parseInt(br.readLine());
+        int E = Integer.parseInt(br.readLine());
+        int F = Integer.parseInt(br.readLine());
 
-        int y = Character.getNumericValue(r.charAt(0));
-        int x = Character.getNumericValue(r.charAt(1));
+        int[] arr = new int[]{A,B,C,D};
+        int[] arr2 = new int[]{E,F};
 
-        System.out.println(x+y);
+        int result = Funtion(arr) + Funtion(arr2);
+
+        System.out.println(result);
+
     }
 
+    public static int Funtion(int[] arr ){
+        Arrays.sort(arr);
+
+        int sum = 0;
+
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+        return sum - arr[0];
+    }
 
 }
 
