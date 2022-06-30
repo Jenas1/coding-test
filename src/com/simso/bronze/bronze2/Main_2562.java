@@ -39,12 +39,12 @@ public class Main_2562 {
         }
         int result = arr[arr.length -1];
 
-        int resultIndex = Arrays.asList(index).indexOf(result);
+        int resultIndex = index.indexOf(result);
 
 
         bw.write(String.valueOf(result));
         bw.newLine();
-        bw.write(String.valueOf(resultIndex));
+        bw.write(String.valueOf(resultIndex + 1 ));
 
         bw.flush();
         bw.close();
