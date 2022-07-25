@@ -1,9 +1,7 @@
 package com.simso.baekjoon.BFS;
 
-import com.simso.ex.Pair;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class BFSTest {

@@ -1,22 +1,32 @@
 package com.simso.baekjoon.sprout;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 
 public class Main_2744 {
     public static void main(String[] args) throws Exception {
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-//        String result = br.readLine();
+        String result = br.readLine();
 
-        String result = "a";
+        char[] array = new char[result.length()];
 
-        int i = (result.charAt(0) - 'A');
+        for (int i = 0; i < result.length(); i++) {
+            if (65 <= result.charAt(i) && result.charAt(i) <= 90) {
+                array[i] = (char) (result.charAt(i) + 32);
+                continue;
+            } else if (97 <= result.charAt(i) && result.charAt(i) <= 122) {
 
-        char c = 97 - 'A';
-        System.out.println(c);
+                array[i] = (char) (result.charAt(i) - 32);
+
+                continue;
+
+            }
+        }
+
+        for (char c : array) {
+            System.out.print(c);
+        }
 
     }
 }

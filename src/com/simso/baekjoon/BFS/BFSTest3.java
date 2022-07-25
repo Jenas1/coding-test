@@ -1,7 +1,5 @@
 package com.simso.baekjoon.BFS;
 
-import com.simso.ex.Pair;
-
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
